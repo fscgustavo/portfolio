@@ -1,3 +1,4 @@
+import { Main } from '@/components/main';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -16,8 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-background p-1 text-gray-100`}>
-        {children}
+      <body className={`${inter.className} bg-background  text-gray-100`}>
+        <Main>{children}</Main>
       </body>
     </html>
   );
