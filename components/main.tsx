@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Menu } from './menu';
 
 type MainProps = {
   children: ReactNode;
@@ -6,8 +7,8 @@ type MainProps = {
 
 export function Main({ children }: MainProps) {
   return (
-    <main className="grid h-screen grid-cols-[20rem_auto] p-4">
-      <aside className="h-full rounded-lg bg-foreground p-9">Sidebar</aside>
+    <main className="grid h-screen max-lg:auto-rows-max lg:grid-cols-[20rem_auto] lg:p-4">
+      <Menu />
       {children}
     </main>
   );
