@@ -1,3 +1,5 @@
+import { Input } from '@/components/ui/input';
+
 export default function Contact() {
   return (
     <div>
@@ -7,7 +9,7 @@ export default function Contact() {
         on gus.fonnseca@gmail.com regardless of the subject.
       </p>
       <form className="mt-16">
-        <input />
+        <Input />
       </form>
     </div>
   );
