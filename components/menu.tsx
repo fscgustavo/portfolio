@@ -34,7 +34,7 @@ function Navigation({ className, ...props }: HTMLAttributes<HTMLElement>) {
         return (
           <Link
             href={href}
-            className="flex items-center gap-x-3 px-3 py-2 text-sm hover:text-white"
+            className="flex items-center gap-x-3 px-6 py-2 text-sm hover:bg-[#2d2d2d]"
             key={href}
           >
             <Icon className="h-5 w-5" />
@@ -48,8 +48,10 @@ function Navigation({ className, ...props }: HTMLAttributes<HTMLElement>) {
 
 export function Menu() {
   return (
-    <div className="bg-foreground max-lg:flex max-lg:justify-between max-lg:p-5 lg:h-full lg:rounded-lg lg:px-6 lg:py-10">
-      <MyAvatar />
+    <div className="bg-foreground max-lg:flex max-lg:justify-between max-lg:p-5 lg:h-full lg:rounded-lg lg:py-10">
+      <div className="lg:px-6">
+        <MyAvatar />
+      </div>
       <Navigation className="mt-10 max-lg:hidden" />
       <Sheet>
         <SheetTrigger className="lg:hidden">Open</SheetTrigger>
