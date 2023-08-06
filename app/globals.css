@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .field {
+    @apply rounded-md border border-[#dfeffe23] bg-foreground px-2 text-sm leading-5 text-white outline-2 outline-[#dfeffe23] placeholder:text-gray-100;
+  }
+}

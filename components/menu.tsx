@@ -37,7 +37,7 @@ function Navigation({ className, ...props }: HTMLAttributes<HTMLElement>) {
             className="flex items-center gap-x-3 px-3 py-2 text-sm hover:text-white"
             key={href}
           >
-            <Icon className="h-6 w-6" />
+            <Icon className="h-5 w-5" />
             {text}
           </Link>
         );
@@ -48,7 +48,7 @@ function Navigation({ className, ...props }: HTMLAttributes<HTMLElement>) {
 
 export function Menu() {
   return (
-    <div className=" bg-foreground max-lg:flex max-lg:justify-between max-lg:p-5 lg:h-full lg:rounded-lg lg:px-6 lg:py-10">
+    <div className="bg-foreground max-lg:flex max-lg:justify-between max-lg:p-5 lg:h-full lg:rounded-lg lg:px-6 lg:py-10">
       <MyAvatar />
       <Navigation className="mt-10 max-lg:hidden" />
       <Sheet>
