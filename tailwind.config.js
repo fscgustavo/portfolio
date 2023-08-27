@@ -1,3 +1,5 @@
+import colors from 'tailwindcss/colors';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
@@ -12,6 +14,7 @@ module.exports = {
       background: '#202020',
       foreground: '#272727',
       white: '#F2F2F2',
+      red: colors.red,
       gray: {
         100: '#7C7F82',
       },
