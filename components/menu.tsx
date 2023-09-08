@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from './ui/sheet';
-import { Mail, Newspaper } from 'lucide-react';
+import { Github, Linkedin, Mail, Newspaper, ScrollText } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import React, { HTMLAttributes } from 'react';
 
@@ -22,26 +22,65 @@ function MyAvatar() {
   );
 }
 
-const links = [
-  { Icon: Newspaper, text: 'About', href: '/' },
-  { Icon: Mail, text: 'Contact', href: '/contact' },
-];
+const links = {
+  main: [
+    { Icon: Newspaper, text: 'About', href: '/' },
+    { Icon: Mail, text: 'Contact', href: '/contact' },
+  ],
+  social: [
+    {
+      Icon: Github,
+      text: 'Github',
+      href: 'https://github.com/fscgustavo',
+      target: '_blank',
+      rel: 'noopener',
+    },
+    {
+      Icon: Linkedin,
+      text: 'Linkedin',
+      href: 'https://www.linkedin.com/in/gustavo-fonseca-17584a179/?locale=en_US',
+      target: '_blank',
+      rel: 'noopener',
+    },
+    {
+      Icon: ScrollText,
+      text: 'Resume',
+      href: '/Gustavo%20Fonseca%20-%20Resume.pdf',
+      target: '_blank',
+    },
+  ],
+};
 
 function Navigation({ className, ...props }: HTMLAttributes<HTMLElement>) {
   return (
-    <nav className={cn('grid gap-y-0.5', className)}>
-      {links.map(({ Icon, href, text }) => {
-        return (
-          <Link
-            href={href}
-            className="flex items-center gap-x-3 px-6 py-2 text-sm hover:bg-[#2d2d2d]"
-            key={href}
-          >
-            <Icon className="h-5 w-5" />
-            {text}
-          </Link>
-        );
-      })}
+    <nav className={cn('grid gap-y-8', className)} {...props}>
+      <ul className="list-none gap-y-0.5">
+        {links.main.map(({ Icon, href, text, ...props }) => {
+          return (
+            <li key={href}>
+              <Link href={href} className="nav-link" {...props}>
+                <Icon className="h-5 w-5" />
+                {text}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+      <div>
+        <p className="mb-3 pl-6 text-xs uppercase">Other resources</p>
+        <ul className="list-none gap-y-0.5">
+          {links.social.map(({ Icon, href, text, ...props }) => {
+            return (
+              <li key={href}>
+                <a href={href} className="nav-link" {...props}>
+                  <Icon className="h-5 w-5" />
+                  {text}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </nav>
   );
 }
