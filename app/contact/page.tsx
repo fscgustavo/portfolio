@@ -40,9 +40,9 @@ export default function Contact() {
   });
 
   return (
-    <div>
-      <h1 className="text-5xl font-semibold text-white">Contact</h1>
-      <p className="mt-6 leading-7 text-white">
+    <div className="text-accent-foreground">
+      <h1 className="text-5xl font-semibold">Contact</h1>
+      <p className="mt-6 leading-7 ">
         Do not hesitate to contact me through the form here or by direct email
         on gus.fonnseca@gmail.com regardless of the subject.
       </p>
@@ -57,7 +57,7 @@ export default function Contact() {
             name="name"
             render={({ field }) => (
               <FormItem className="grid auto-rows-min">
-                <FormLabel className="text-sm text-white">Username</FormLabel>
+                <FormLabel className="text-sm ">Username</FormLabel>
                 <FormControl>
                   <Input placeholder="Gustavo Fonseca" {...field} />
                 </FormControl>
@@ -70,7 +70,7 @@ export default function Contact() {
             name="email"
             render={({ field }) => (
               <FormItem className="grid auto-rows-min">
-                <FormLabel className="text-sm text-white">
+                <FormLabel className="text-sm ">
                   Where can I reach you?
                 </FormLabel>
                 <FormControl>
@@ -89,7 +89,7 @@ export default function Contact() {
             name="message"
             render={({ field }) => (
               <FormItem className="grid auto-rows-min md:col-span-2">
-                <FormLabel className="text-sm text-white">
+                <FormLabel className="text-sm">
                   What&rsquo;s your message?
                 </FormLabel>
                 <FormControl>

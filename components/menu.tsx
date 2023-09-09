@@ -8,14 +8,14 @@ import React, { HTMLAttributes } from 'react';
 function MyAvatar() {
   return (
     <Link href="/">
-      <div className="flex gap-x-3">
+      <div className="flex gap-x-3 text-card-foreground">
         <Avatar>
           <AvatarImage src="https://github.com/fscgustavo.png" />
-          <AvatarFallback className="bg-white">GF</AvatarFallback>
+          <AvatarFallback>GF</AvatarFallback>
         </Avatar>
         <div className="text-sm">
-          <p className="text-white">Gustavo Fonseca</p>
-          <p>Software Engineer</p>
+          <p>Gustavo Fonseca</p>
+          <p className="text-muted-foreground">Software Engineer</p>
         </div>
       </div>
     </Link>
@@ -53,7 +53,10 @@ const links = {
 
 function Navigation({ className, ...props }: HTMLAttributes<HTMLElement>) {
   return (
-    <nav className={cn('grid gap-y-8', className)} {...props}>
+    <nav
+      className={cn('grid gap-y-8 text-muted-foreground', className)}
+      {...props}
+    >
       <ul className="list-none gap-y-0.5">
         {links.main.map(({ Icon, href, text, ...props }) => {
           return (
@@ -87,7 +90,7 @@ function Navigation({ className, ...props }: HTMLAttributes<HTMLElement>) {
 
 export function Menu() {
   return (
-    <div className="bg-foreground max-lg:flex max-lg:justify-between max-lg:p-5 lg:h-full lg:rounded-lg lg:py-10">
+    <div className="bg-card max-lg:flex max-lg:justify-between max-lg:p-5 lg:h-full lg:rounded-xl lg:py-10">
       <div className="lg:px-6">
         <MyAvatar />
       </div>
