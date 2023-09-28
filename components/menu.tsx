@@ -1,7 +1,14 @@
 import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from './ui/sheet';
-import { Github, Linkedin, Mail, Newspaper, ScrollText } from 'lucide-react';
+import {
+  Github,
+  Linkedin,
+  Mail,
+  MenuIcon,
+  Newspaper,
+  ScrollText,
+} from 'lucide-react';
 import { cn } from '@/lib/utils';
 import React, { HTMLAttributes } from 'react';
 
@@ -96,8 +103,10 @@ export function Menu() {
       </div>
       <Navigation className="mt-10 max-lg:hidden" />
       <Sheet>
-        <SheetTrigger className="lg:hidden">Open</SheetTrigger>
-        <SheetContent side="left" className="lg-hidden bg-foreground">
+        <SheetTrigger className="lg:hidden">
+          <MenuIcon />
+        </SheetTrigger>
+        <SheetContent side="left" className="lg-hidden bg-card">
           <SheetHeader>
             <MyAvatar />
           </SheetHeader>

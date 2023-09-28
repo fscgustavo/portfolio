@@ -13,7 +13,8 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { sendEmail } from '../actions';
-import { useState, useTransition } from 'react';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
@@ -99,12 +100,9 @@ export default function Contact() {
               </FormItem>
             )}
           />
-          <button
-            className="rounded-md border bg-white px-4 py-3 text-sm font-semibold text-background hover:bg-white/90"
-            disabled={isLoading}
-          >
+          <Button disabled={isLoading}>
             {isLoading ? 'Submitting' : 'Submit'}
-          </button>
+          </Button>
         </form>
       </FormProvider>
     </div>
