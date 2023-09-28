@@ -57,7 +57,12 @@
     @apply bg-background text-foreground;
   }
 
+  a,
+  button {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
+  }
+
   .nav-link {
-    @apply flex items-center gap-x-3 px-6 py-2 text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
+    @apply flex items-center gap-x-3 px-6 py-2 text-sm hover:bg-accent;
   }
 }

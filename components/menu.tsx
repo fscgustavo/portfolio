@@ -14,7 +14,7 @@ import React, { HTMLAttributes } from 'react';
 
 function MyAvatar() {
   return (
-    <Link href="/">
+    <Link href="/" className="block">
       <div className="flex gap-x-3 text-card-foreground">
         <Avatar>
           <AvatarImage src="https://github.com/fscgustavo.png" />

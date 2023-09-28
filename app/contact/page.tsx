@@ -43,9 +43,16 @@ export default function Contact() {
   return (
     <div className="text-accent-foreground">
       <h1 className="text-5xl font-semibold">Contact</h1>
-      <p className="mt-6 leading-7 ">
+      <p className="mt-6 leading-7">
         Do not hesitate to contact me through the form here or by direct email
-        on gus.fonnseca@gmail.com regardless of the subject.
+        on{' '}
+        <a
+          href="mailto:gus.fonnseca@gmail.com"
+          className="underline underline-offset-4"
+        >
+          gus.fonnseca@gmail.com
+        </a>{' '}
+        regardless of the subject.
       </p>
       <FormProvider {...form}>
         <form
