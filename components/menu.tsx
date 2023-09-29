@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from './ui/sheet';
 import {
+  ExternalLink,
   Github,
   Linkedin,
   Mail,
@@ -80,10 +81,25 @@ function Navigation({ className, ...props }: HTMLAttributes<HTMLElement>) {
         <p className="mb-3 pl-6 text-xs uppercase">Other resources</p>
         <ul className="list-none gap-y-0.5">
           {links.social.map(({ Icon, href, text, ...props }) => {
+            const isExternal = props.target === '_blank';
+
             return (
               <li key={href}>
-                <a href={href} className="nav-link" {...props}>
-                  <Icon className="h-5 w-5" />
+                <a href={href} className="nav-link group" {...props}>
+                  <Icon
+                    className={cn(
+                      'h-5 w-5 ',
+                      isExternal &&
+                        'group-hover:hidden group-focus-visible:hidden',
+                    )}
+                  />
+                  <ExternalLink
+                    className={cn(
+                      'hidden h-5 w-5 ',
+                      isExternal &&
+                        'group-hover:block group-focus-visible:block',
+                    )}
+                  />
                   {text}
                 </a>
               </li>
