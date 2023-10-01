@@ -10,7 +10,7 @@ const resend = new Resend(process.env.NEXT_RESEND_API_KEY);
 export async function sendEmail(body: SendEmailProps) {
   try {
     const data = await resend.emails.send({
-      from: 'Portfolio <gus.fonnseca@gmail.com>',
+      from: 'Portfolio <portfolio@gufonseca.com>',
       to: ['gus.fonnseca@gmail.com'],
       reply_to: 'gus.fonnseca@gmail.com',
       subject: `Portfolio - New message from ${body.name}`,
