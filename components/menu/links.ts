@@ -1,4 +1,5 @@
 import {
+  Code,
   Github,
   Linkedin,
   LucideIcon,
@@ -22,6 +23,7 @@ type NavigationLinkProps = {
 export const links: NavigationLinkProps = {
   main: [
     { Icon: Newspaper, text: 'About', href: '/' },
+    { Icon: Code, text: 'Projects', href: '/projects' },
     { Icon: Mail, text: 'Contact', href: '/contact' },
   ],
   social: [

@@ -35,13 +35,13 @@ export default function Contact() {
       await sendEmail(data);
 
       form.reset();
-    } catch (error) {
+    } finally {
       setIsLoading(false);
     }
   });
 
   return (
-    <div className="text-accent-foreground">
+    <div>
       <h1 className="text-5xl font-semibold">Contact</h1>
       <p className="mt-6 leading-7">
         Do not hesitate to contact me through the form here or by direct email
