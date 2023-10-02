@@ -35,7 +35,7 @@ function MenuMobile() {
 
 export function Menu() {
   return (
-    <div className="bg-card max-lg:flex max-lg:justify-between max-lg:p-5 lg:h-full lg:rounded-xl lg:py-10">
+    <div className="bg-card max-lg:flex max-lg:justify-between max-lg:p-5 lg:max-h-screen lg:rounded-xl lg:py-10">
       <div className="lg:px-6">
         <MenuAvatar />
       </div>

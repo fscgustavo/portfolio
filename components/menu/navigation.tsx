@@ -1,8 +1,8 @@
 import { HTMLAttributes } from 'react';
-import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { links } from './links';
+import { NavAnchor, NavLink } from './link';
 
 type NavigationProps = {
   onRouteChange?: () => void;
@@ -22,9 +22,8 @@ export function Navigation({
         {links.main.map(({ Icon, href, text, onClick, ...props }) => {
           return (
             <li key={href}>
-              <Link
+              <NavLink
                 href={href}
-                className="nav-link"
                 onClick={(event) => {
                   onClick?.(event);
                   onRouteChange?.();
@@ -33,7 +32,7 @@ export function Navigation({
               >
                 <Icon className="h-5 w-5" />
                 {text}
-              </Link>
+              </NavLink>
             </li>
           );
         })}
@@ -46,7 +45,7 @@ export function Navigation({
 
             return (
               <li key={href}>
-                <a href={href} className="nav-link group" {...props}>
+                <NavAnchor href={href} className="group" {...props}>
                   <Icon
                     className={cn(
                       'h-5 w-5 ',
@@ -62,7 +61,7 @@ export function Navigation({
                     )}
                   />
                   {text}
-                </a>
+                </NavAnchor>
               </li>
             );
           })}

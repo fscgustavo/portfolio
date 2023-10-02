@@ -107,7 +107,7 @@ export default function Contact() {
               </FormItem>
             )}
           />
-          <Button disabled={isLoading}>
+          <Button className="md:col-span-2" disabled={isLoading}>
             {isLoading ? 'Submitting' : 'Submit'}
           </Button>
         </form>
