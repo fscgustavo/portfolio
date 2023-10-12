@@ -15,9 +15,12 @@ import {
 import { sendEmail } from '../actions';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { useToast } from '@/components/ui/use-toast';
+import { Toaster } from '@/components/ui/toaster';
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
   const form = useForm<SendEmailProps>({
     resolver: zodResolver(SendEmailSchema),
@@ -34,7 +37,18 @@ export default function Contact() {
 
       await sendEmail(data);
 
+      toast({
+        description: 'The message was sent successfully!',
+        variant: 'success',
+      });
+
       form.reset();
+    } catch {
+      toast({
+        description:
+          'There was an error while submitting the message. If there is an issue, I will fix it as soon as possible!',
+        variant: 'destructive',
+      });
     } finally {
       setIsLoading(false);
     }
@@ -108,10 +122,11 @@ export default function Contact() {
             )}
           />
           <Button className="md:col-span-2" disabled={isLoading}>
-            {isLoading ? 'Submitting' : 'Submit'}
+            {isLoading ? 'Submitting...' : 'Submit'}
           </Button>
         </form>
       </FormProvider>
+      <Toaster />
     </div>
   );
 }
