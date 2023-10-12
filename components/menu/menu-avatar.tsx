@@ -6,7 +6,10 @@ export function MenuAvatar(props: Omit<LinkProps, 'href' | 'className'>) {
     <Link href="/" className="block" {...props}>
       <div className="flex gap-x-3 text-card-foreground">
         <Avatar>
-          <AvatarImage src="https://github.com/fscgustavo.png" />
+          <AvatarImage
+            src="https://github.com/fscgustavo.png"
+            alt="Picture of Gustavo Fonseca"
+          />
           <AvatarFallback>GF</AvatarFallback>
         </Avatar>
         <div className="text-sm">

@@ -11,7 +11,7 @@ function MenuMobile() {
 
   return (
     <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-      <SheetTrigger className="lg:hidden">
+      <SheetTrigger className="lg:hidden" aria-label="Open sidebar">
         <MenuIcon />
       </SheetTrigger>
       <SheetContent side="left" className="lg-hidden bg-card">
@@ -35,7 +35,7 @@ function MenuMobile() {
 
 export function Menu() {
   return (
-    <div className="bg-card max-lg:flex max-lg:justify-between max-lg:p-5 lg:max-h-screen lg:rounded-xl lg:py-10">
+    <div className="border bg-card max-lg:flex max-lg:justify-between max-lg:p-5 lg:max-h-screen lg:rounded-xl lg:py-10">
       <div className="lg:px-6">
         <MenuAvatar />
       </div>
