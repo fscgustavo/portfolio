@@ -57,12 +57,12 @@ export default function Contact() {
   return (
     <div>
       <h1 className="text-5xl font-semibold">Contact</h1>
-      <p className="mt-6 leading-7">
+      <p className="mt-6 leading-7 text-muted-foreground">
         Do not hesitate to contact me through the form here or by direct email
         on{' '}
         <a
           href="mailto:gus.fonnseca@gmail.com"
-          className="underline underline-offset-4"
+          className="underline underline-offset-4 hover:text-accent-foreground"
         >
           gus.fonnseca@gmail.com
         </a>{' '}

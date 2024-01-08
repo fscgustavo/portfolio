@@ -37,7 +37,7 @@ export const links: NavigationLinkProps = {
     {
       Icon: Linkedin,
       text: 'Linkedin',
-      href: 'https://www.linkedin.com/in/gustavo-fonseca-17584a179/?locale=en_US',
+      href: 'https://www.linkedin.com/in/fonseca-gustavo',
       target: '_blank',
       rel: 'noopener',
     },
