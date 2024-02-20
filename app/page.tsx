@@ -33,6 +33,8 @@ export default function Home() {
         <a
           href="https://www.linkedin.com/in/fonseca-gustavo"
           className="underline underline-offset-4 hover:text-accent-foreground"
+          target="_blank"
+          rel="noopener"
         >
           See more on LinkedIn
         </a>
@@ -46,6 +48,8 @@ export default function Home() {
           <a
             href="https://www.linkedin.com/in/fonseca-gustavo"
             className="underline underline-offset-4 hover:text-accent-foreground"
+            target="_blank"
+            rel="noopener"
           >
             Reach out
           </a>{' '}
