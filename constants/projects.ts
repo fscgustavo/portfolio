@@ -28,7 +28,7 @@ export const projects = {
             alt: 'Preview of the project Fast Food Shop',
         },
         title: 'Fast Food Shop',
-        description: '🚧 In progress...',
+        description: 'The project aims to create a suite of tools for store owners to improve operational efficiency and decision-making. It features a centralized dashboard for real-time insights on revenue, order volume, and cancellations, with trend analysis.  It contains a secure email OTP for login and the order management is streamlined for easy navigation, filtering, and direct action on orders via a centralized table.',
         links: {
             preview: 'https://fast-food-shop.vercel.app/dashboard',
             sourceCode: 'https://github.com/fscgustavo/fast-food-shop',
