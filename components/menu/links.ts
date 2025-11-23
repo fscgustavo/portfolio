@@ -44,7 +44,7 @@ export const links: NavigationLinkProps = {
     {
       Icon: ScrollText,
       text: 'Resume',
-      href: '/Gustavo%20Fonseca%20-%20Resume.pdf',
+      href: '/gustavo_fonseca_software_engineer.pdf',
       target: '_blank',
     },
   ],

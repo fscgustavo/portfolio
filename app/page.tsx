@@ -5,7 +5,7 @@ export default function Home() {
       <div className="grid gap-6 text-muted-foreground">
         <p>
           Hello, I&apos;m Gustavo Fonseca, a developer based in São Paulo,
-          Brazil, with 4+ years of experience in web development. I helped
+          Brazil, with 5+ years of experience in web development. I helped
           retailers boost online sales and improve customer experience through
           design systems, performance optimizations, and strategic SEO.
         </p>
